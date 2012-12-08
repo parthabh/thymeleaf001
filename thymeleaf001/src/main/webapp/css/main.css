@@ -1,0 +1,19 @@
+html {
+	margin: 0;
+	padding: 10px;
+}
+
+body {
+	font-family: font :     75% georgia, sans-serif;;
+	color: black;
+}
+
+h1#pageHeader {
+	background: #2A52BE;
+	color: white;
+	padding: 25px;
+	-webkit-border-top-left-radius: 0;
+	-webkit-border-top-right-radius: 25px;
+	-webkit-border-bottom-right-radius: 0;
+	-webkit-border-bottom-left-radius: 25px;
+}

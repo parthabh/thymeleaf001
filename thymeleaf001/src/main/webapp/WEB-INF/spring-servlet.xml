@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
-	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc
+						http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
+						http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+						http://www.springframework.org/schema/context 
+						http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
-	<context:annotation-config />
+	<!-- Pick resources. -->
+	<!-- <mvc:resources location="/images/" mapping="/images/**" /> -->
+	<mvc:resources location="/css/" mapping="/css/**" />
+	<mvc:annotation-driven/>
+
 	<!-- Find the controllers by annotation on the classes, within given packages -->
 	<context:component-scan base-package="foo.bar.controller" />
+
+
 
 	<bean id="templateResolver"
 		class="org.thymeleaf.templateresolver.ServletContextTemplateResolver">
@@ -26,8 +36,6 @@
 	<bean class="org.thymeleaf.spring3.view.ThymeleafViewResolver">
 		<property name="templateEngine" ref="templateEngine" />
 	</bean>
-
-
 
 </beans>
  
