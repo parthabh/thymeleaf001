@@ -6,7 +6,7 @@
 		</encoder>
 	</appender>
 
-	<!-- Control third paty logs -->
+	<!-- Control third party logs -->
 	<logger name="org.springframework">
 		<level value="INFO" />
 	</logger>
@@ -19,4 +19,4 @@
 		<level value="DEBUG" />
 		<appender-ref ref="CONSOLE" />
 	</root>
-</configuration>                                 
+</configuration>                                
