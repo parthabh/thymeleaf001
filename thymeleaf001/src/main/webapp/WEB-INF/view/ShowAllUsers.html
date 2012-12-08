@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Welcome.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>List of users.</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="user:${userList}">
+				<td th:text="${user.fname}"></td>
+			</tr>
+
+
+			<tr th:remove="all">
+				<td>Partha</td>
+			</tr>
+			<tr th:remove="all">
+				<td>Pratim</td>
+			</tr>
+
+		</tbody>
+	</table>
+
+</body>
+</html>
